@@ -2,25 +2,25 @@ import React, {useState, useEffect} from 'react';
 import {Card, Container, Row, Col, Button} from 'react-bootstrap';
 import img1 from '../assets/images/1.jpg';
 import {useNavigate} from 'react-router-dom';
-
+const allRecipes = [
+  {id: 1, titre: 'Recette 1', img: img1},
+  {id: 2, titre: 'Recette 2', img: img1},
+  {id: 3, titre: 'Recette 2', img: img1},
+  {id: 4, titre: 'Recette 2', img: img1},
+  {id: 5, titre: 'Recette 2', img: img1},
+  {id: 6, titre: 'Recette 2', img: img1},
+  {id: 7, titre: 'Recette 2', img: img1},
+  {id: 8, titre: 'Recette 2', img: img1},
+  {id: 9, titre: 'Recette 2', img: img1},
+  {id: 10, titre: 'Recette 2', img: img1},
+  {id: 11, titre: 'Recette 2', img: img1},
+  {id: 12, titre: 'Recette 2', img: img1},
+  {id: 13, titre: 'Recette 2', img: img1},
+  // Ajoutez plus de recettes ici...
+];
 function ShuffleRecipes() {
   // Données en dur pour les recettes
-  const allRecipes = [
-    {id: 1, titre: 'Recette 1', img: img1},
-    {id: 2, titre: 'Recette 2', img: img1},
-    {id: 3, titre: 'Recette 2', img: img1},
-    {id: 4, titre: 'Recette 2', img: img1},
-    {id: 5, titre: 'Recette 2', img: img1},
-    {id: 6, titre: 'Recette 2', img: img1},
-    {id: 7, titre: 'Recette 2', img: img1},
-    {id: 8, titre: 'Recette 2', img: img1},
-    {id: 9, titre: 'Recette 2', img: img1},
-    {id: 10, titre: 'Recette 2', img: img1},
-    {id: 11, titre: 'Recette 2', img: img1},
-    {id: 12, titre: 'Recette 2', img: img1},
-    {id: 13, titre: 'Recette 2', img: img1},
-    // Ajoutez plus de recettes ici...
-  ];
+
   // État pour les recettes aléatoires
   const [recipes, setRecipes] = useState([]);
   const navigate = useNavigate();
@@ -53,7 +53,6 @@ function ShuffleRecipes() {
 
   // Mélanger les recettes lorsque le composant est monté
   useEffect(refreshRecipes, []);
-
   return (
     <section className="best-receipe-area">
       <Container>
