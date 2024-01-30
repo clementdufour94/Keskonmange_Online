@@ -1,17 +1,7 @@
-import React, {useState} from 'react';
-import {
-  Accordion,
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Collapse,
-} from 'react-bootstrap';
+import React from 'react';
+import {Accordion, Container, Row, Col, Form} from 'react-bootstrap';
 import backgroundImage from '../img/bg-img/breadcumb3.jpg';
 function RecipePost() {
-  const [open, setOpen] = useState(false);
-
   return (
     <div>
       <div
